@@ -4,7 +4,7 @@ const router = express.Router()
 router.get('/address', (req, res, next) => {
   const {
     street,
-    town,
+    city,
     state,
     zip
   } = req.params
