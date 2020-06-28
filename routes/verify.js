@@ -5,7 +5,8 @@ router.get('/address', (req, res, next) => {
   const {
     street,
     town,
-    state
+    state,
+    zip
   } = req.params
   
   res.send(0)
