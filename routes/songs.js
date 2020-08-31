@@ -2,6 +2,16 @@ import songs from '../assets/data/Songs.json'
 import express from 'express'
 const router = express.Router()
 
+router.get('/album/:album', (req, res) => {
+  const { album } = req.params
+  const songList = songs[album]
+  if(songList)
+    res.send(songList)
+  else
+    res.status(410)
+      .send("album provided is not valid")
+})
+
 router.get('/:songKey', (req, res) => {
   const { songKey } = req.params
   const song = getSongFromKey(songKey)
