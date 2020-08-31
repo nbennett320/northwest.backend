@@ -8,6 +8,7 @@ const clientTokenRouter = require('./routes/client_token')
 const purchaseRouter = require('./routes/purchase')
 const calculate = require('./routes/calculate')
 const verify = require('./routes/verify')
+const songs = require('./routes/songs')
 const app = express()
 const cors = require('cors')
 
@@ -29,6 +30,7 @@ app.use('/purchase', purchaseRouter)
 //app.use('/purchase/:nonce', purchase)
 app.use('/calculate', calculate)
 app.use('/verify', verify)
+app.use('/songs', songs)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
