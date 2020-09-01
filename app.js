@@ -11,6 +11,7 @@ const verify = require('./routes/verify')
 const songs = require('./routes/songs')
 const albums = require('./routes/albums')
 const goodies = require('./routes/goodies')
+const products = require('./routes/products')
 const app = express()
 const cors = require('cors')
 
@@ -35,6 +36,7 @@ app.use('/verify', verify)
 app.use('/songs', songs)
 app.use('/albums', albums)
 app.use('/goodies', goodies)
+app.use('/products', products)
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
