@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "serve": "nodemon --config config.json -r esm ./bin/www",
-    "heroku-postbuild": "nodemon --config config.json -r esm ./bin/www"
+    "dev": "nodemon --config nodemon.json -r esm ./bin/www",
+    "start": "node -r esm ./bin/www"
   },
   "dependencies": {
     "@babel/core": "^7.8.0",
