@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "serve": "nodemon --config config.json -r esm ./bin/www",
-    "heroku-postbuild": "nodemon --config config.json -r esm ./bin/www"
+    "heroku-postbuild": "node ./bin/www"
   },
   "dependencies": {
     "@babel/core": "^7.8.0",
