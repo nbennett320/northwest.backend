@@ -4,6 +4,9 @@
  * Module dependencies.
  */
 
+var env = require('dotenv')
+env.config()
+
 var app = require('../app')
 var debug = require('debug')('northwest.backend:server')
 var http = require('http')

@@ -1,7 +1,12 @@
 import express from 'express'
 import braintree from 'braintree'
-import keys from '../keys.json'
 const router = express.Router()
+const keys = {
+  merchantId: process.env.MERCHANTID,
+  publicKey: process.env.PUBLICKEY,
+  privateKey: process.env.PRIVATEKEY,
+}
+
 
 router.post('/:nonce/:amount', (req, res, next) => {
   const gateway = braintree.connect({
