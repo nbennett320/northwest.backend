@@ -23,15 +23,13 @@ router.get('/:songKey', (req, res) => {
 })
 
 const getSongFromKey = key => {
-  for(const i in Object.keys(songs)) {
-    const album = Object.keys(songs)[i]
-    for(const j in album) {
-      const song = songs[album][Object.keys(album)[j]]
-      if(makeKey(song["title"]) === key) {
-        return song
-      }
-    }
-  }
+  console.log(key)
+  Object.keys(songs).forEach(i => {
+    songs[i].forEach(j => {
+      if(key === makeKey(j.title))
+        return j
+    })
+  })
 }
 
 const makeKey = title => title.replace(/\s/g,'-').replace(/[.()]/g,'').toLowerCase()
